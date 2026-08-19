@@ -1,0 +1,39 @@
+[project]
+name = "pymath-practice"
+version = "0.1.0"
+description = "A Python lab for learning mathematics through practice problems"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = []
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3,<10",
+    "ruff>=0.15,<0.16",
+]
+
+[tool.uv]
+package = false
+
+[tool.pytest.ini_options]
+# The host also has ROS pytest plugins on its global Python path. They are not
+# part of this project and should not be auto-loaded into its test suite.
+addopts = [
+    "-ra",
+    "-p", "no:ament_copyright",
+    "-p", "no:ament_flake8",
+    "-p", "no:ament_lint",
+    "-p", "no:ament_pep257",
+    "-p", "no:ament_xmllint",
+    "-p", "no:launch_ros",
+    "-p", "no:launch_testing",
+]
+pythonpath = [".", "src"]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 88
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["B", "E", "F", "I", "UP"]
