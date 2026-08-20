@@ -1,6 +1,6 @@
 import pytest
 
-from exercises.number_theory.p005_prime_factors import prime_factors
+from exercises.p005_prime_factors import prime_factors
 
 
 @pytest.mark.parametrize(

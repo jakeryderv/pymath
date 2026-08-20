@@ -6,8 +6,9 @@ works.
 
 The repository deliberately separates practice solutions from reusable code:
 
-- `exercises/` contains individual problems and your solutions.
-- `tests/` contains examples and edge cases for those problems.
+- `exercises/` is a flat, numbered catalog of individual problems and your
+  solutions.
+- `tests/exercises/` mirrors that flat catalog with examples and edge cases.
 - `src/pymath/` is for techniques worth reusing across several problems.
 - `notes/` records useful ideas and recurring mistakes.
 - `notebooks/` is a scratch space for experiments and visualizations.
@@ -36,7 +37,7 @@ skipped until you activate them.
 4. Run only that problem's tests. For example:
 
    ```bash
-   uv run pytest tests/exercises/number_theory/test_p001_divisors.py
+   uv run pytest tests/exercises/test_p001_divisors.py
    ```
 
 5. Implement the simplest correct solution.
@@ -58,6 +59,28 @@ By default, Codex should coach rather than reveal the answer. Ask for:
 - **Review** when you have an attempt and want feedback without replacement.
 
 The complete collaboration rules live in `AGENTS.md`.
+
+## Exercise metadata and discovery
+
+Every exercise module defines `METADATA` with its problem ID, title,
+categories, and concepts. Categories and concepts are collections, so an
+exercise can belong to more than one mathematical area without being forced
+into a single directory.
+
+Use the catalog API to inspect or group the complete problem set:
+
+```python
+from pymath.exercise_catalog import discover_exercises
+
+number_theory = [
+    exercise
+    for exercise in discover_exercises()
+    if "number-theory" in exercise.categories
+]
+```
+
+The metadata describes an exercise. Learning progress remains in
+`ROADMAP.md`.
 
 ## When reusable code belongs in `src/pymath`
 

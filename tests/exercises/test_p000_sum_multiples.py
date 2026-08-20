@@ -1,6 +1,6 @@
 import pytest
 
-from exercises.arithmetic.p000_sum_multiples import sum_multiples
+from exercises.p000_sum_multiples import sum_multiples
 
 
 def test_sums_multiples_of_three_or_five() -> None:

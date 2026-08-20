@@ -1,6 +1,6 @@
 import pytest
 
-from exercises.number_theory.p002_is_prime import is_prime
+from exercises.p002_is_prime import is_prime
 
 
 @pytest.mark.parametrize("n", [-10, -1, 0, 1])

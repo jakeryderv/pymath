@@ -1,6 +1,6 @@
 import pytest
 
-from exercises.number_theory.p003_gcd import gcd
+from exercises.p003_gcd import gcd
 
 pytestmark = pytest.mark.skip(reason="P003 has not been started")
 

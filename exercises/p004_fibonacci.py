@@ -14,6 +14,15 @@ Constraints:
 Use an iterative solution for this exercise.
 """
 
+from pymath.exercise_catalog import ExerciseMetadata
+
+METADATA = ExerciseMetadata(
+    problem_id="P004",
+    title="Fibonacci sequence",
+    categories=("sequences", "number-theory"),
+    concepts=("iteration", "state", "validation"),
+)
+
 
 def fibonacci(count: int) -> list[int]:
     """Return the first ``count`` Fibonacci numbers."""

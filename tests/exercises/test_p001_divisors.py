@@ -1,6 +1,6 @@
 import pytest
 
-from exercises.number_theory.p001_divisors import divisors
+from exercises.p001_divisors import divisors
 
 
 @pytest.mark.parametrize(

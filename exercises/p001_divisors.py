@@ -17,6 +17,15 @@ Stretch goal:
 
 import math
 
+from pymath.exercise_catalog import ExerciseMetadata
+
+METADATA = ExerciseMetadata(
+    problem_id="P001",
+    title="Positive divisors",
+    categories=("number-theory",),
+    concepts=("factor-pairs", "square-roots", "ordering"),
+)
+
 
 def divisors(n: int) -> list[int]:
     """Return the positive divisors of ``n`` in ascending order."""

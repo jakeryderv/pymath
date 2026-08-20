@@ -13,6 +13,15 @@ tests cover normal behavior, boundaries, overlapping matches, and invalid
 input.
 """
 
+from pymath.exercise_catalog import ExerciseMetadata
+
+METADATA = ExerciseMetadata(
+    problem_id="P000",
+    title="Sum of multiples",
+    categories=("arithmetic", "number-theory"),
+    concepts=("loops", "modulo", "validation", "deduplication"),
+)
+
 
 def sum_multiples(limit: int, divisors: tuple[int, ...]) -> int:
     """Return the sum of numbers below ``limit`` matching any divisor."""

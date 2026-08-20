@@ -1,6 +1,6 @@
 import pytest
 
-from exercises.sequences.p004_fibonacci import fibonacci
+from exercises.p004_fibonacci import fibonacci
 
 pytestmark = pytest.mark.skip(reason="P004 has not been started")
 

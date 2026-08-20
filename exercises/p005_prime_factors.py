@@ -15,6 +15,15 @@ Constraints:
 
 import math
 
+from pymath.exercise_catalog import ExerciseMetadata
+
+METADATA = ExerciseMetadata(
+    problem_id="P005",
+    title="Prime factorization",
+    categories=("number-theory", "arithmetic"),
+    concepts=("primes", "divisibility", "factorization"),
+)
+
 
 def prime_factors(n: int) -> list[int]:
     """

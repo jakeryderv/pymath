@@ -25,9 +25,14 @@ problems quickly.
 
 ## Exercise conventions
 
+- Keep exercise modules flat under `exercises/` and name them
+  `pNNN_short_name.py`.
 - Keep the prompt, constraints, and examples in the exercise module docstring.
+- Define `METADATA` in every exercise module with a matching problem ID, a
+  title, one or more categories, and relevant concepts. Use multiple
+  categories when a problem spans mathematical areas.
 - Use one public function per introductory exercise.
-- Mirror exercise paths under `tests/exercises/`.
+- Mirror each exercise as `tests/exercises/test_pNNN_short_name.py`.
 - Unstarted test modules use a module-level `pytestmark = pytest.mark.skip(...)`.
   Remove it when beginning that problem; do not add it back to hide a failure.
 - Add edge cases as understanding improves.

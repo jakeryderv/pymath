@@ -17,6 +17,15 @@ Stretch goal:
 
 import math
 
+from pymath.exercise_catalog import ExerciseMetadata
+
+METADATA = ExerciseMetadata(
+    problem_id="P002",
+    title="Primality test",
+    categories=("number-theory",),
+    concepts=("primes", "divisibility", "square-roots", "early-exit"),
+)
+
 
 def is_prime(n: int) -> bool:
     """Return whether ``n`` is prime."""
