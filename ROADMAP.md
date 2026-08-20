@@ -15,13 +15,13 @@ important edge cases, and approximate time and space complexity.
   - Practice: loops, modulo, validation, and avoiding duplicate counting
 - `[x]` **P001 — Positive divisors**
   - Practice: factor pairs, square roots, ordering, and `O(sqrt(n))` thinking
-- `[ ]` **P002 — Primality test**
+- `[x]` **P002 — Primality test**
   - Practice: definitions, boundary cases, divisibility, and early exits
 - `[ ]` **P003 — Greatest common divisor**
   - Practice: Euclid's algorithm, invariants, and zero/negative inputs
 - `[ ]` **P004 — Fibonacci sequence**
   - Practice: iterative state, sequence construction, and input validation
-- `[ ]` **P005 — Prime factorization**
+- `[x]` **P005 — Prime factorization**
   - Practice: repeated division and combining earlier number-theory ideas
 
 Suggested order: P001, P002, P003, P004, P005.
