@@ -2,8 +2,6 @@ import pytest
 
 from exercises.number_theory.p005_prime_factors import prime_factors
 
-pytestmark = pytest.mark.skip(reason="P005 has not been started")
-
 
 @pytest.mark.parametrize(
     ("n", "expected"),

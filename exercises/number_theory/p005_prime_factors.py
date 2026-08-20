@@ -13,7 +13,35 @@ Constraints:
     ``n`` must be at least 2. Raise ``ValueError`` otherwise.
 """
 
+import math
+
 
 def prime_factors(n: int) -> list[int]:
-    """Return the prime factors of ``n`` in ascending order."""
-    raise NotImplementedError("Solve P005")
+    """
+    Return the prime factors of ``n`` in ascending order.
+
+    approach: Sieve of Eratosthenes
+    """
+    if n < 2:
+        raise ValueError("n must be at least 2.")
+
+    stop = math.isqrt(n)
+    nums = sorted(range(2, stop + 1))
+
+    i = 0
+    while i < len(nums):
+        num = nums[i]
+        nums = nums[: i + 1] + [x for x in nums[i + 1 :] if x % num != 0]
+        i += 1
+
+    factors = []
+
+    for prime in nums:
+        while n % prime == 0:
+            factors.append(prime)
+            n //= prime
+
+    if n > 1:
+        factors.append(n)
+
+    return factors

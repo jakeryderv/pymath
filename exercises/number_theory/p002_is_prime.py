@@ -15,7 +15,18 @@ Stretch goal:
     divisor that actually needs to be checked.
 """
 
+import math
+
 
 def is_prime(n: int) -> bool:
     """Return whether ``n`` is prime."""
-    raise NotImplementedError("Solve P002")
+    if n < 2:
+        return False
+
+    stop = math.isqrt(n)
+
+    for num in range(2, stop + 1):
+        if n % num == 0:
+            return False
+
+    return True
